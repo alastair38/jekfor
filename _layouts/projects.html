@@ -10,17 +10,17 @@ layout: default
   <div class="row">
     {{ content }}
 
-      {% for  product in site.products %}
-        {% if product.collection_home != true %}
+      {% for  project in site.projects %}
+        {% if project.collection_home != true %}
       <div class="col s4">
         <div class="col s12 card">
           <h2 class="center">
-            <a href="{{ product.url }}">
-              {{ product.title }}
+            <a href="{{ project.url }}">
+              {{ project.title }}
             </a>
           </h2>
           <div class="card-image">
-            <img src="{{ product.image }}">
+            <img src="{{ project.image }}">
             <span class="card-title">Card Title</span>
 
           </div>
