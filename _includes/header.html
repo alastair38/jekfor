@@ -1,0 +1,38 @@
+<header class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo center" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        {% for my_page in site.pages reversed %}
+        {% if my_page.title %}
+            {% if my_page.title == page.title  %}
+        <li class="active">
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        </li>
+            {% else %}
+        <li>
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        </li>
+            {% endif %}
+
+        {% endif %}
+        {% endfor %}
+        {% for my_product in site.products %}
+        {% if my_product.collection_home %}
+
+          {% if my_product.title == page.title  %}
+        <li class="active">
+            <a class="page-link active" href="{{ my_product.url | prepend: site.baseurl }}">{{ my_product.title }}</a>
+        </li>
+          {% else %}
+        <li>
+            <a class="page-link" href="{{ my_product.url | prepend: site.baseurl }}">{{ my_product.title }}</a>
+        </li>
+          {% endif %}
+
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>

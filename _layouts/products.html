@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="row">
+    {{ content }}
+
+      {% for  product in site.products %}
+        {% if product.collection_home != true %}
+      <div class="col s4">
+        <div class="col s12 card">
+          <h2 class="center">
+            <a href="{{ product.url }}">
+              {{ product.title }}
+            </a>
+          </h2>
+          <div class="card-image">
+            <img src="{{ product.image }}">
+            <span class="card-title">Card Title</span>
+
+          </div>
+          <div class="card-content">
+
+          </div>
+          <div class="card-action">
+                    <a href="#">This is a link</a>
+          </div>
+
+
+        </div>
+      </div>
+        {% endif %}
+      {% endfor %}
+
+  </div>
+
+</article>

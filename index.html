@@ -1,0 +1,42 @@
+---
+layout: home
+is_home: true
+text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta.
+---
+
+<div class="home">
+
+  <h1 class="page-heading"></h1>
+  <div class="row">
+    <div class="col s12">
+      <div class="col s12 materialize-red lighten-2">
+        {{page.text}}
+      </div>
+    </div>
+  </div>
+
+  <ul class="post-list row center-align">
+    {% for page in site.html_pages reversed %}
+      {% if page.is_home != true %}
+      <li class="col s4">
+        <h2 class="materialize-red lighten-2">
+          <a class="post-link white-text" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </h2>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <!-- <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="col s4">
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul> -->
+
+</div>

@@ -1,0 +1,32 @@
+<footer class="page-footer">
+          <div class="container">
+            <div class="row center-align">
+                  <ul class="social-media-list">
+                    {% if site.github_username %}
+                    <li class="col s4">
+                      {% include icon-github.html username=site.github_username %}
+                    </li>
+                    {% endif %}
+
+                    {% if site.twitter_username %}
+                    <li class="col s4 white-text">
+                      {% include icon-twitter.html username=site.twitter_username %}
+                    </li>
+                    {% endif %}
+                    {% if site.email %}
+                    <li class="col s4 white-text">
+                      {% include icon-email.html %}
+                    </li>
+                    {% endif %}
+                  </ul>
+
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © {{ site.time | date_to_long_string }}
+<a class="grey-text text-lighten-4 right" href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>
+
+            </div>
+          </div>
+</footer>
