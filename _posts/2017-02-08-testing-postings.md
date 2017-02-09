@@ -1,9 +1,8 @@
 ---
 title: Testing postings
+date: '2017-02-08 00:00:00'
 layout: post
-date: '2017-02-08 11:23:01'
 ---
-
-[Hello](http://bbc.co.uk) and then goodbye
+[Hello](http://bbc.co.uk) and then goodbye kitty cat
 
 ![Cat](https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png)
