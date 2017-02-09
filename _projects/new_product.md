@@ -1,9 +1,9 @@
 ---
+title: New Product
+date: '2016-06-06 10:34:14'
 layout: post
-title:  "New Product"
-date:   2016-06-06 11:34:14 +0100
-categories: new
+categories:
+- new
 image: images/sample-1.jpg
 ---
-
-Stuff about the product here
+Stuff about the product here. It should have compelling content.
