@@ -1,7 +1,6 @@
 ---
-layout: page
 title: Contact
-permalink: /contact/
+layout: page
+permalink: "/contact/"
 ---
-
-This is an about page. Write some stuff about stuff here.
+This is a contact page. Write some stuff about contacting yourself here.
